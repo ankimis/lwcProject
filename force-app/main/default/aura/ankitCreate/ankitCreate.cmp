@@ -1,0 +1,66 @@
+<aura:component  controller="createAccount">
+    <aura:handler name="init" value="{!this}" action="{!c.getContent}"/>
+        <aura:handler event="force:refreshView" action="{!c.getContent}"/>	
+    <aura:attribute name="Name" type="List"/>
+    <aura:attribute name="getConList" type="List"/>
+    <aura:attribute name="openCreate" type="boolean" default="false"/>
+    
+    <h1><aura:iteration items="{!v.Name}" var="con1">
+        name is record => {!con1.Name}
+         <lightning:input type="text" value="{!con1.Name}" label="Name" aura:id="name1"/>
+       <lightning:input type="text" value="{!con1.Email}"  label="Email" aura:id="email1"/>
+
+    
+    <button class="slds-button slds-button_neutral" onclick="{!c.editContact}" data-conId="{!con1.Id}">Create New</button>
+
+        </aura:iteration>
+        
+    </h1>
+    
+    <lightning:input type="text" aura:id="conName" label="Name"/>
+     <lightning:input type="text" aura:id="conEmail" label="Email"/>
+
+    
+    <button class="slds-button slds-button_neutral" onclick="{!c.openCreateContact}">Create New</button>
+
+   <div class="slds">
+    <table class="slds-table slds-table--bordered slds-table--striped ">
+        <thead>
+            <th scope="col"></th>
+            <th scope="col"></th>
+             <th scope="col"><button class="slds-button slds-button_neutral" onclick="{!c.openCreate}">Create New</button></th>
+        </thead>
+        <thead>
+            <tr>
+                 <th scope="col"><span class="slds-truncate">Name</span></th>
+                 <th scope="col"><span class="slds-truncate">Email</span></th>
+                 <th scope="col"><span class="slds-truncate">Phone Number</span></th>
+                <th scope="col"><span class="slds-truncate">Action</span></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+                <aura:iteration items="{!v.getConList}" var="con">
+                    <tr>
+                 					 <td>{!con.Name}</td>   
+                                     <td>{!con.Email}</td>   
+                                     <td>{!con.Phone}</td>
+                        			<td><button class=" button slds-button slds-button_neutral" onclick="{!c.openUpdate}" data-conId="{!con.Id}" >update</button>
+                        				<button class=" button1 slds-button slds-button_neutral" onclick="{!c.openDelete}" data-conId="{!con.Id}">Delete New</button>
+                        </td>
+                       				
+                      </tr>
+                 </aura:iteration>
+            
+        </tbody>
+    </table>
+       
+      </div>
+    <aura:if isTrue="{!v.openCreate}">
+        we are hum
+        
+    </aura:if>
+  
+    
+	
+</aura:component>

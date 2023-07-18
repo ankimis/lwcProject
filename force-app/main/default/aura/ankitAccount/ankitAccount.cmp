@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:Attribute name="message" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <hr/>
+    {!v.body}
+	    <hr/>
+    Button Clicked Result = {!v.message}
+</aura:component>

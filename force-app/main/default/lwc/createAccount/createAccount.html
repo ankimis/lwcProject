@@ -1,0 +1,36 @@
+<template>
+    <!-- <lightning-card title="Record no mode">
+<lightning-record-form object-api-name={objectApiName}
+columns="3"
+layout-type="Full"
+ >
+
+</lightning-record-form>
+
+        </lightning-card> -->
+        <lightning-card title="Record edit mode">
+            <lightning-record-form object-api-name={objectApiName}
+            columns="2"
+           
+            mode="readonly"
+            record-id={recordId}
+            fields={fields}
+        
+             >
+            
+            </lightning-record-form>
+            
+                    </lightning-card>
+    <lightning-record-edit-form  object-api-name="Account"
+    onsuccess={handleSuccess} >
+        <lightning-messages> </lightning-messages>
+        <lightning-input-field field-name="Name"> </lightning-input-field>
+        <lightning-button
+            class="slds-m-top_small"
+            type="submit"
+            label="Create new"
+            onclick={handler}
+        >
+        </lightning-button>
+    </lightning-record-edit-form>
+</template>

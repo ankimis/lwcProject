@@ -1,0 +1,12 @@
+.nav{
+    background-color: black;
+    color: bisque;
+    font-size: medium;
+    font-weight: 200;
+    box-shadow: rgb(26, 35, 38);
+    text-align: center;
+}
+.nav:hover{
+    cursor: pointer;
+    background-color: rgb(32, 82, 16);
+}

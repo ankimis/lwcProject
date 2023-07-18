@@ -1,0 +1,25 @@
+.prev1, .next1{
+    position: absolute;
+    font-weight: 900;
+    top: 50%;
+    width: 15px;
+    color: black;
+}
+.next1{
+    right: 0;
+    border-radius: 3px,0,0,3px;
+}
+.total{
+    position: absolute;
+    color: bisque;
+    font-size: medium;
+}
+.text-section{
+    position: absolute;
+    color: #f2f2f2;
+    font-size: 15px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}

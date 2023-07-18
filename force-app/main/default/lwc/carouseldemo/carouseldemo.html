@@ -1,0 +1,16 @@
+<template >
+    <lightning-carousel >
+        <template if:true={players}>
+        <template for:each={players} for:item="player">
+        <lightning-carousel-image 
+        key={id} 
+        src={player.src}
+        header={player.header}
+        discription={player.discription}
+        alternative-text="text"
+        href={player.href} style="width: 500px; height:500px;">
+        </lightning-carousel-image>
+    </template>
+</template>        
+    </lightning-carousel>
+</template>

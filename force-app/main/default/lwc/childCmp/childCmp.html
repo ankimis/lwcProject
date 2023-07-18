@@ -1,0 +1,13 @@
+<template>
+    {callchild}  
+    <div class="sampleForm" style="width:20%;">
+        <lightning-input type="text" label="FirstName">
+        </lightning-input>
+        <lightning-input type="text" label="LastName">
+        </lightning-input>
+    </div>
+    <lightning-button label="Fire the event" variant="success" onclick={handleClick}>
+    </lightning-button> 
+    <lightning-button label="Called to child to parent data" variant="warning" onclick={parentclick}>
+    </lightning-button>
+</template> 

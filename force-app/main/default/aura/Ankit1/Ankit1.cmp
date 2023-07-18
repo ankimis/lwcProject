@@ -1,0 +1,5 @@
+<aura:component >
+    <c:Ankit/>
+    <h1>this is ankt1 </h1>
+	
+</aura:component>

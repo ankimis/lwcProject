@@ -1,0 +1,74 @@
+.app{
+    background: #091f43;
+    min-height: 100vh;
+}
+.app-card{
+    background: white;
+    max-width: 407px;
+    min-width: 317px;
+    border-radius: 8px;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    font-size: 20px;
+    color: #091f43;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+}
+input{
+    text-align: center;
+    padding: 9px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+input::placeholder{
+    color: #bfbbfb;
+}
+.width100{
+    width: 100%;
+}
+button{
+    border: none;
+    background: #a12e2e;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    height: 39px;
+    border-radius: 8px;
+    color: white;
+}
+.section-center{
+    text-align: center;
+}
+.temprature{
+    font-size: 35px;
+    font-weight: 700;
+}
+.description,.location{
+    line-height: border-box;
+    font-size: 25px;
+    font-weight: 400;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px solid black;
+    /* padding: 20px; */
+}
+.left{
+    border-left:  1px solid rgba(0, 0, 0, 0.247);
+}
+.weatherIcon{
+    width: 125px;
+}
+.inline{
+    display: flex;
+    justify-content: center;
+}

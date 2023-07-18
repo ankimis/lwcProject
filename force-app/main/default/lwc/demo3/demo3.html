@@ -1,0 +1,14 @@
+<template>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onrowaction={handleRowActions}>
+        </lightning-datatable>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="Submit" onclick={handler}></lightning-button>
+
+    </div>
+</template>

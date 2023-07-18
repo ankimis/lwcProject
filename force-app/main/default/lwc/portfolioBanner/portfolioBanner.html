@@ -1,0 +1,40 @@
+<template>
+    <div class="banner">
+        <img src={userPic} alt="banner" class="profilePic">
+        <div class="name">{fullname}</div>
+        <div class="designation">{designation} at {designation}</div>
+        <div class="location">{companyLocation}</div>
+        <div class="div">
+            <template if:true={linkdinUrl}>
+                <a href={linkdinUrl} target="_blank">
+                    <img src={Linkdin} alt="socialIcon" class="socia-Icon">
+                </a>
+            </template>
+            <template if:true={twitterUrl}>
+                <a href={twitterUrl} target="_blank">
+                    <img src={twitter} alt="socialIcon" class="socia-Icon">
+                </a>
+            </template>
+            <template if:true={githubUrl}>
+            <a href={githubUrl} target="_blank">
+                <img src={github} alt="socialIcon" class="socia-Icon">
+            </a>
+            </template>
+            <template if:true={youtubeUrl}>
+                <a href={youtubeUrl} target="_blank">
+                    <img src={youtube} alt="socialIcon" class="socia-Icon">
+                </a>
+            </template>
+            <template if:true={trailheadUrl}>
+                <a href={trailheadUrl} target="_blank">
+                    <img src={trailhead1} alt="socialIcon" class="socia-Icon">
+                </a>
+            </template>
+            <template if:true={blogUrl}>
+            <a href={blogUrl} target="_blank">
+                <img src={blog} alt="socialIcon" class="socia-Icon">
+            </a>
+            </template>
+        </div>
+    </div>
+</template>

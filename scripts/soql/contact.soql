@@ -1,0 +1,3 @@
+SELECT LastName, Phone
+  FROM Contact
+  WHERE Phone = '6395499873'

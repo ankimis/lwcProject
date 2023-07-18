@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p> Thid s is a account First Component</p>
+    <aura:attribute name="var1" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="arrayDemo" type="string[]" default="['v1','v2']"/>
+    <aura:attribute name="var2" type="Account" default="{'sobjectType' : 'Account','Name' : 'advait'}" />
+    <h1>
+    component of value :{!v.var2.Name}
+            array of value :{!v.arrayDemo[0]}
+
+    </h1>
+</aura:component>

@@ -1,0 +1,11 @@
+<template>
+  <div class="slds-grid  slds-scrollable_x slds-is-relative">
+      <div class="slds-col slds-var-m-around_small slds-scrollable_x slds-list_horizontal "  >
+  
+    <template for:each={imagecrousels} for:item="imagecrousel">
+        <img  class="zoom  slds-text-longform  slds-var-m-around_small" key={imagecrousel.id}  src={imagecrousel.src} alt="text">
+    </template>     
+  </div>
+</div>
+    
+</template>

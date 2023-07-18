@@ -1,0 +1,24 @@
+.banner{
+    background: #f6c403;
+    min-height: 300px;
+    text-align: center;
+}
+.profilePic{
+    border-radius:  50%;
+    height: 192;
+    width: 180px;
+    padding: 30px 15px;
+}
+.name{
+     font-size: 30px;
+    font-weight: 700;
+}
+.designation, .location{
+    font-size: 20px;
+    color: #243763;
+}
+.socia-Icon{
+    height: 40px;
+    width: 40px;
+    margin: 16px 16px 0px 0px;
+}

@@ -1,0 +1,28 @@
+<template>
+    <h1>{parentC}</h1>
+    <div class="c-container">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 1">Field 1</p>
+                    <p>{Name}</p>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 2">Field 2</p>
+                    <p>{parentData.LastName}</p>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 3">Field 3</p>
+                    <p>{parentData.datet}</p>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <input type="text" name="Entername" onchange={input}>
+    <button onclick={onchildchange}> send to child to parent</button>
+    <br>
+</template>

@@ -1,0 +1,12 @@
+.THIS {
+    background-color: red;
+}
+.THIS.demo1{
+     background-color: black;
+    color:blue;
+}
+
+.THIS .demo2{
+     background-color: green;
+    color:yellow;
+}

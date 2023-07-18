@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <div class="slds-grid  slds-wrap slds-grid_vertical-reverse" style="height: 50px;width:50px;">
+            <lightning-carousel class="">
+                <template if:true={players}>
+                    <template for:each={players} for:item="player">
+                        <lightning-carousel-image class="slds-grid_vertical-reverse"
+                            key={id}
+                            src={player.src}
+                            header={player.header}
+                            alternative-text="text"
+                            href={player.href}>
+                        </lightning-carousel-image>
+                    </template>
+                </template>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>

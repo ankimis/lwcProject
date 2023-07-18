@@ -1,0 +1,31 @@
+<template>
+    <table class="slds-table slds-table--bordered slds-table--striped ">
+        <tr> 
+            <td scope="col"><b>Select</b></td>
+            <td scope="col"><b>Account Name</b></td>
+        </tr>
+        <template for:each={accounts.data} for:item="acc" for:index="index">
+            <tr key={acc.Id} scope="col">
+                <td><lightning-input type="radio" onchange={handleChange} value={acc.Name}></lightning-input>
+                   
+                </td>
+                <td scope="col"><span class="slds-truncate"></span>{acc.Name}</td>
+              
+            </tr>
+        </template>
+    </table>
+    <table class="slds-table slds-table--bordered slds-table--striped " >
+        <tr> 
+            <td scope="col"><b>Last Name</b></td>
+            <td scope="col"><b>Account Name</b></td>
+        </tr>
+        <template for:each={records} for:item="con" for:index="index">
+            <tr key={con.Id} scope="col">
+                   <td scope="col"><span class="slds-truncate"></span> {con.LastName}
+                </td>
+                <td scope="col"><span class="slds-truncate"></span>{currentAccName}</td>
+              
+            </tr>
+        </template>
+    </table>
+</template>

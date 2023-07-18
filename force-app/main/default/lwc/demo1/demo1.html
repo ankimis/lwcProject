@@ -1,0 +1,23 @@
+<template>
+    <h1>this   hiuh </h1>
+    <div style="height: 200px;">
+        <lightning-card title="my foirst data base" >
+            <lightning-datatable 
+            key-field ="id"
+            data = {data}
+            columns = {columns}
+            onrowaction={handleRowAction}>
+    
+            </lightning-datatable>  
+        </lightning-card>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="Submit" onclick={handler}></lightning-button>
+
+    </div>
+
+    
+    
+  
+   
+</template>

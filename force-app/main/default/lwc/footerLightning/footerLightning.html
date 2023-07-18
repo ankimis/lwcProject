@@ -1,0 +1,22 @@
+<template>
+        <div class="slds-grid slds-wrap   slds-grid_align-space backclass"> 
+                    <template for:each={tabledata} for:item="table">
+                        <div class="slds-col slds-size_5-of-12" key={table.id} >
+                                <table>
+                                        <tbody>
+                                            <tr class="slds-m-horizontal_large">
+                                                <td>
+                                                    <a class={table.clas} href={table.url}>
+                                                        {table.link}
+                                                        <br>
+                                                        <span class={table.clas}>{table.span1}</span> </br>
+                                                        <span class={table.clas}>{table.span2}</span> 
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                        </div>
+                    </template>            
+        </div>    
+</template>

@@ -1,0 +1,46 @@
+<template>
+    <div class="slds-form-element">
+    </div>
+    <div class="slds-grid">
+        <div class="slds-col slds-order_1">
+        </div>
+        <div class="slds-col slds-order_2 slds-card">
+            <label class="slds-form-element__label slds-p-left_x-large" for="form-element-help-01">Conatact Name</label>
+            <div class="slds-form-element__control slds-p-around_small">
+                <input type="text" id="form-element-help-01" placeholder="Contact Name" class="slds-input "
+                    onchange={ContactName} />
+            </div>
+            <label class="slds-form-element__label slds-p-left_x-large" for="form-element-help-01">Conatact Last
+                Name</label>
+            <div class="slds-form-element__control slds-p-around_small">
+                <input type="text" id="form-element-help-02" placeholder="Contact Last Name" class="slds-input"
+                    onchange={ContactLastName} />
+            </div>
+            <label class="slds-form-element__label slds-p-left_x-large" for="form-element-help-01">Date</label>
+            <div class="slds-form-element__control slds-p-around_small">
+                <input type="date" id="form-element-help-03" placeholder="Date" class="slds-input" onchange={Datet} />
+            </div>
+            <button class="slds-button slds-button_success slds-m-around_large" type="button"
+                onclick={savecontactdata}>Save Data</button>
+            <div class="slds-progress-bar slds-p-top_large " aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                aria-label="Placeholder for description of progress bar" role="progressbar">
+                <span class="slds-progress-bar__value" style="height:50%">
+                    <span class="slds-assistive-text">Progress: 50%</span>
+                </span>
+            </div>
+        </div>
+        <div class="slds-col slds-order_3">
+        </div>
+    </div>
+    <br>
+    <div class="slds-card">
+        <p>value child to parent</p>
+        <h1>{childtopp}</h1>
+    </div>
+    <div class="slds-card">
+        <br>
+        <p>value parent to child</p>
+        <button onclick={change}>chanege</button>
+        <c-demochild06 parent-c={parent} onchild={chlidvaue} parent-data={data}></c-demochild06>
+    </div>
+</template>

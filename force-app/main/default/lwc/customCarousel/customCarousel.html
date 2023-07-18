@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-is-relative">      
+        <template for:each={slidesData} for:item="slide">
+            <div class={slide.cardClasses} key={slide.slideIndex} >
+                <div class="total">{slide.slideIndex}/{slidesData.length}</div>
+                <img  style="width: -webkit-fill-available;" src={slide.image} alt="text">
+                <div class="text-section">
+                    <h3 class="slds-text-heading_large ">{slide.heading}</h3>
+                    <div class="slds-text-heading_small">
+                        {slide.desciption}
+                    </div>
+                </div>
+            </div>
+        </template>
+        <a href="" class="prev1">&#10094;</a>
+        <a href="" class="next1">&#10095;</a>
+
+    </div>
+</template>

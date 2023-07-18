@@ -1,0 +1,137 @@
+<template>
+    <lightning-button class=" button slds-button slds-button_neutral" variant="brand" label="Create Account" title="Primary action" onclick={creteAccount} ></lightning-button>
+
+            <table class="slds-table slds-table--bordered slds-table--striped ">
+                <tr>
+                    <td scope="col"><b>sr no</b></td>   
+                    <td scope="col"><b>Account Name</b></td>
+                    <td scope="col"><b>Account Id</b></td>
+                    <td scope="col"><b>Action</b></td>
+
+                </tr>
+                <template for:each={accountRecords.data} for:item="acc" for:index="index">
+                    <tr key={acc.Id} scope="col">
+                        <td><span class="slds-truncate"></span>
+                            {index}
+                        </td>
+                        <td scope="col"><span class="slds-truncate"></span>{acc.Name}</td>
+                        <td scope="col"><span class="slds-truncate"></span>{acc.Id}</td>
+                        <td scope="col">
+                            <lightning-button class="slds-button slds-button--destructive"  variant="brand" label="Delete" title="Primary action" onclick={handleDelete} value={acc.Id} ></lightning-button>
+                            <lightning-button class=" button slds-button slds-button_neutral" variant="brand" label="Update" title="Primary action" onclick={handleClick} value={acc.Id} ></lightning-button>
+                        </br><lightning-button class=" button slds-button slds-button_neutral" label="Click me" onclick={CreateAccont} data-index={index}></lightning-button>
+                        </td>
+
+                    </tr>
+                </template>
+            </table>
+    <template if:true={customFormModal}>
+ 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- modal header start -->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={customHideModalPopup}>
+                    <lightning-icon icon-name="utility:close"
+                    alternative-text="close"
+                    variant="inverse"
+                    size="small" ></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading_medium slds-hyphenate">Update Account Form</h2>
+            </header>
+            <!-- modal body start -->
+            <div class="slds-modal__content slds-p-around_medium">
+         
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Name" onchange={createName} value={accountname}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Phone" onchange={createPhone} value={acccphone}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Description" onchange={createEmail} value={accDescription}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Industry" onchange={createDesignation} value={accIndustry}></lightning-input>
+                </div>
+        </div>
+        <!-- modal footer start-->
+            <footer class="slds-modal__footer">
+                <lightning-button
+                variant=”Neutral”
+                label=”Cancel”
+                class=”slds-m-left_x-small”
+                onclick={handleCancel}>
+             </lightning-button>
+                <button class="slds-button slds-button--destructive" onclick={customHideModalPopup}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handleClick1}>Save</button>
+            </footer>
+        </div>
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open">
+        </div>
+        </template>
+        <template for:each={accountRecords.data} for:item="acc" for:index="index">
+            <tr key={acc.Id} scope="col">
+                <td><span class="slds-truncate"></span>
+                    {index}
+                </td>
+                <td scope="col"><span class="slds-truncate"></span>{acc.Name}</td>
+                <td scope="col"><span class="slds-truncate"></span>{acc.Id}</td>
+                <td scope="col">
+                    <lightning-button class=" button slds-button slds-button_neutral" variant="brand" label="Delete" title="Primary action" onclick={handleDelete} value={acc.Id} ></lightning-button>
+                    <lightning-button class=" button slds-button slds-button_neutral" variant="brand" label="Update" title="Primary action" onclick={handleClick} value={acc.Id} ></lightning-button>
+                </br><lightning-button class=" button slds-button slds-button_neutral" label="Click me" onclick={CreateAccont} data-index={index}></lightning-button>
+                </td>
+
+            </tr>
+        </template>
+    </table>
+    <template if:true={createAccountForm}>
+ 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- modal header start -->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={customHideModalPopup}>
+                    <lightning-icon icon-name="utility:close"
+                    alternative-text="close"
+                    variant="inverse"
+                    size="small" ></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading_medium slds-hyphenate">Create Account Form</h2>
+            </header>
+            <!-- modal body start -->
+            <div class="slds-modal__content slds-p-around_medium">
+         
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Name" onchange={createName}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Phone" onchange={createPhone}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Industry" onchange={createEmail}></lightning-input>
+                </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Designation" onchange={createDesignation}></lightning-input>
+                </div>
+        </div>
+        <!-- modal footer start-->
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button--destructive" onclick={customHideModalPopup}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handle}>Save</button>
+            </footer>
+        </div>
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open">
+        </div>
+        </template>
+   
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <section class="slds-var-p-left_medium work">
+        <h2 class="section_heading blue_color ">{details.HEADING}</h2>
+        <div>
+            <h4 class="blue_color">{details.Department1}</h4>
+            <template for:each={details.Project1} for:item="Projec">
+                <div key={Projec.Department} class="slds-var-m-top_medium">
+                    <h3 class="section_subHeading blue_color">{Projec.Department}</h3>
+                        <ul class="slds-var-m-top_medium slds-var-p-left_large summary_list slds-list_dotted slds-is-relative">
+                            <template for:each={Projec.List} for:item="point">
+                                <li key={point}>{point}</li>
+                            </template>
+                        </ul>
+                </div>
+            </template>
+            <div>
+                <!-- <c-my-resume-tags tags-list={details.OTHERS_SKILLS.SKILLS_LIST} heading={details.OTHERS_SKILLS.HEADING}>
+                </c-my-resume-tags> -->
+            </div>
+        </div>
+
+    </section>
+</template>

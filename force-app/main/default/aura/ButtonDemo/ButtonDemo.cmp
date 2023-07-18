@@ -1,0 +1,23 @@
+<aura:component>
+    
+    <aura:attribute name="textDate" type="date" />
+    <aura:attribute name="dateValidationError" type="boolean"/>
+    <br/>
+    <div  claass=" wide">
+        <lightning:input class="{v.dateValidationError ? 'side-has-error' : ''}"
+                             type="date"
+                             label="enter a date"
+                             value="{!v.textDate}"
+                             name="date"
+                             onchange="{!c.dateUpdate}"/>
+        <aura:if isTrue="{!v.dateValidationError}">
+            <div class="slds_text_color-error slds-p-left_x-small">
+                /Date must be present and future
+            </div>
+        </aura:if>
+        <lightning:button disabled="{!v.dateValidationError}" 
+                          variant="brand" label="submit"
+                          onclick="{!c.submit}">
+        </lightning:button>
+     </div>
+</aura:component>
