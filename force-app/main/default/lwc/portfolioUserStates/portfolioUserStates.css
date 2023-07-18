@@ -11,3 +11,8 @@ p{
 img{
     height: 100px;
 }
+@media (max-width:720px) {
+    img{
+        margin-top: 16px;
+    }
+}
