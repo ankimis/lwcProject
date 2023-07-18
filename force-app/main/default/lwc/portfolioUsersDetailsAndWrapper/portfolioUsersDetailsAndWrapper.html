@@ -2,12 +2,22 @@
     <div class="userdetailsAndWrapper">
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12">
-                <c-portfolio-userdetails record-id={recordId}
-                object-api-name={objectApiName}
-                ></c-portfolio-userdetails>
+                <template if:true={recordId}>
+                    <c-portfolio-userdetails record-id={recordId}
+                    object-api-name={objectApiName}
+                    resume-url = {resumeUrl}
+                    ></c-portfolio-userdetails>
+                </template>
             </lightning-layout-item>
             <lightning-layout-item size="12">
-                <div>User Status come here</div>
+                <template if:true={rank}>
+                    <c-portfolio-user-states
+                    rank={rank}
+                    badges={badges}
+                    points={points}
+                    trails={trails}
+                    ></c-portfolio-user-states>
+                </template>
             </lightning-layout-item>
         </lightning-layout>
     </div>

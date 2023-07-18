@@ -1,6 +1,11 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,api } from 'lwc';
 
 export default class PortfolioUsersDetailsAndWrapper extends LightningElement {
-    recordId='a0C5i00000BVZRzEAP';
-    objectApiName ='Portfoli__c';
+    @api recordId
+    @api objectApiName
+    @api resumeUrl;
+    @api  rank
+    @api  badges
+    @api  points
+    @api  trails
 }

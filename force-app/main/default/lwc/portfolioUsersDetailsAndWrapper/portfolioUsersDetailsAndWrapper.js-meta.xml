@@ -6,4 +6,16 @@
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" label="Record Id" type="String" default="{!recordId}"/>
+            <property name="objectApiName" label="Object Api Name" type="String"/>
+            <property name="resumeUrl" label="Resume Url" type="String"/>
+            <property name="rank" label="Rank" type="String" datasource="Scout ,hikker, Explorer, Adventurer,Mountaineer,Expeditioner
+                Double star ranger,Triple star ranger,Four star ranger,Five star ranger,All star ranger"/>
+            <property name="badges" label="Badges" type="String"/>
+            <property name="points" label="Points" type="String"/>
+            <property name="trails" label="Trails" type="String"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
