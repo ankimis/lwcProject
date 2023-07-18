@@ -1,7 +1,9 @@
 import { LightningElement, api } from 'lwc';
 import PortfolioAssets from '@salesforce/resourceUrl/PortfolioAssets'
 export default class PortfolioUserStates extends LightningElement {
-    // @api trailheadRanking = `${PortfolioAssets}/PortfolioAssets/Ranks/Ranger.png`;
+     trailheadRanking
+      @api recordId
+      @api objectApiName
       @api  badges
       @api  points
       @api  trails
