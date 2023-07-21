@@ -1,0 +1,24 @@
+<template>
+    <div class="skills-wraper slds-var-p-around_large">
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">TechNical Skills</h2>
+        <template for:each={techskills} for:item="techskill">
+            <lightning-badge label={techskill} key={techskill}
+            class="slds-badge_inverse slds-var-m-bottom_medium"> </lightning-badge>
+        </template>
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Tools and Soft Skills</h2>
+        <template for:each={Softoolskills} for:item="Softoolskill">
+            <lightning-badge label={Softoolskill} key={Softoolskill}
+            class="slds-badge_inverse slds-var-m-bottom_medium"> </lightning-badge>
+        </template>
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Software Mathodologies</h2>
+        <template for:each={Developmentskills} for:item="Developmentskill">
+            <lightning-badge label={Developmentskill} key={Developmentskill}
+            class="slds-badge_inverse slds-var-m-bottom_medium"> </lightning-badge>
+        </template>
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium"> Soft Skills</h2>
+        <template for:each={SoftSkills} for:item="SoftSkills">
+            <lightning-badge label={SoftSkills} key={SoftSkills}
+            class="slds-badge_inverse slds-var-m-bottom_medium"> </lightning-badge>
+        </template>
+    </div>
+</template>

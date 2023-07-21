@@ -1,0 +1,31 @@
+<template>
+    <div class="div"></div>
+    <h2 class="slds-var-m-bottom_medium">Salesforce Certifications</h2>
+    <!-- <template if:true={otherCert}> -->
+        <lightning-layout multiple-rows>
+            <template for:each={salesCert} for:item="sert">
+                <lightning-layout-item size="12" key={cert} small-device-size="6"
+                medium-device-size="3"
+                padding="around-small" large-device-size="3">
+                    <div class="cert-box">
+                        <img src={certLogo} alt="cert"/>
+                        <span>{sert}</span>
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    <!-- </template> -->
+    <h2 class="slds-var-m-bottom_medium">Other Certifications</h2>
+    <lightning-layout multiple-rows>
+        <template for:each={otherCert} for:item="other">
+            <lightning-layout-item size="12" key={other}  padding="around-small"
+             small-device-size="6" medium-device-size="3" large-device-size="3">
+                    <div class="cert-box">
+                        <lightning-icon icon-name='utility:classic_interface' alternative-text='classic_interface'
+                        size='large' title='classic_interface'></lightning-icon>
+                        <span>{other}</span>
+                    </div>
+           </lightning-layout-item>
+        </template>
+    </lightning-layout>
+</template>
